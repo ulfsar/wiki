@@ -1,0 +1,5 @@
+1.mysql binlog解析
+mysql binlog3种格式，row,mixed,statement. 解析工作
+mysqlbinlog --base64-output=DECODE-ROWS -v mysql-bin.000144 |more
+--base64-output=DECODE-ROWS： 会显示出row模式带来的sql变更。
+-v ：显示statement模式带来的sql语句
