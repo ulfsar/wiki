@@ -12,40 +12,42 @@ public class CountDownLatchTest {
 
 
     static class CountDownLatchTestThread1 implements Runnable{
+
+        private int index;
+
+        private String name;
+
+        public CountDownLatchTestThread1(int index, String name) {
+            this.index = index;
+            this.name = name;
+        }
+
         @Override
         public void run() {
-            System.out.println(Thread.currentThread().getName()+"run111 begin");
+            System.out.println(this.name+" run begin");
             try {
                 Thread.sleep(5000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }finally {
+                System.out.println(this.name+" run end");
                 countDownLatch.countDown();
             }
-            System.out.println(Thread.currentThread().getName()+"run111 end");
         }
     }
 
-    class CountDownLatchTestThread2 implements Runnable{
-        @Override
-        public void run() {
-            System.out.println(Thread.currentThread().getName()+"run222 begin");
-            try {
-                Thread.sleep(5000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }finally {
-                countDownLatch.countDown();
-            }
-            System.out.println(Thread.currentThread().getName()+"run222 end");
-        }
-    }
+    static class CountDownLatchTestThread3 implements Runnable{
 
-    class CountDownLatchTestThread3 implements Runnable{
+        private String name;
+
+        public CountDownLatchTestThread3(String name) {
+            this.name = name;
+        }
+
         @Override
         public void run() {
             try {
-                System.out.println(Thread.currentThread().getName()+"run333 wait");
+                System.out.println(this.name+" run wait");
                 countDownLatch.await();
                 System.out.println("count down value--->"+countDownLatch.getCount());
                 System.out.println(Thread.currentThread().getName()+"run333 begin");
@@ -53,19 +55,16 @@ public class CountDownLatchTest {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println(Thread.currentThread().getName()+"run333 end");
+            System.out.println(this.name+" run end");
         }
     }
 
     public static void main(String[] args) {
-        CountDownLatchTest countDownLatchTest = new CountDownLatchTest();
-//        CountDownLatchTest.CountDownLatchTestThread2 countDownLatchTest2 = countDownLatchTest.new CountDownLatchTestThread2();
-        CountDownLatchTest.CountDownLatchTestThread3 countDownLatchTest3 = countDownLatchTest.new CountDownLatchTestThread3();
-        Thread t1 = new Thread(new CountDownLatchTestThread1());
-        Thread t2 = new Thread(new CountDownLatchTestThread1());
-        Thread t3 = new Thread(countDownLatchTest3);
-        t1.start();
-        t2.start();
+        for(int i = 0; i<2;i++) {
+            Thread t = new Thread(new CountDownLatchTestThread1(i,"name-->"+i));
+            t.start();
+        }
+        Thread t3 = new Thread(new CountDownLatchTestThread3("name3"));
         t3.start();
     }
 }
