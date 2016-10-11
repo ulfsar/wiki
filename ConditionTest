@@ -1,0 +1,83 @@
+package com.zhisland.yueju.service.concurrenttest;
+
+import java.util.PriorityQueue;
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
+/**
+ * Created by mma on 16/10/12.
+ */
+public class ConditionTest {
+
+    static final int QUEUE_SIZE = 10;
+
+    static PriorityQueue<Integer> queue = new PriorityQueue<Integer>(10);
+
+    static Lock lock = new ReentrantLock();
+
+    static Condition notFull = lock.newCondition();
+
+    static Condition notEmp = lock.newCondition();
+
+    static class Producer implements Runnable{
+        @Override
+        public void run() {
+            product();
+        }
+
+        void product(){
+            while (true){
+                try {
+                    lock.lock();
+                    while (queue.size() == QUEUE_SIZE){
+                        System.out.println("队列已满,正在等待消费");
+                        notFull.await();
+                    }
+                    queue.offer(1); //每次插入一个元素
+                    notEmp.signal();
+                    System.out.println("向队列取中插入一个元素，队列剩余空间："+(QUEUE_SIZE-queue.size()));
+                }catch (Exception e){
+                    e.printStackTrace();
+                    notEmp.signal();
+                }finally {
+                    lock.unlock();
+                }
+            }
+        }
+    }
+
+    static class Consumer implements Runnable{
+        @Override
+        public void run() {
+            consumer();
+        }
+
+        void consumer(){
+            while (true){
+                try {
+                    lock.lock();
+                    while (queue.size() == 0){
+                        System.out.println("队列已消费完毕,正在等待生产");
+                        notEmp.await();
+                    }
+                    queue.poll();   //每次消费队首元素
+                    notFull.signal();
+                    System.out.println("从队列取走一个元素，队列剩余"+queue.size()+"个元素");
+                }catch (Exception e){
+                    e.printStackTrace();
+                    notFull.signal();
+                }finally {
+                    lock.unlock();
+                }
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        Producer producer = new Producer();
+        Consumer consumer = new Consumer();
+        new Thread(producer).start();
+        new Thread(consumer).start();
+    }
+}
