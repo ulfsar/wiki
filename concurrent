@@ -1,3 +1,25 @@
 1.CountDownLatch作用:某一线程等待其它线程执行完毕后执行
 2.CyclicBarrier回环.作用某组线程等待某一状态后再一起执行
 3.Semaphore信号量.作用多线程对资源的访问
+
+1.wait,notify,notifyAll.是Object对象的方法,于每个对象都拥有monitor（即锁），
+所以让当前线程等待某个对象的锁，当然应该通过这个对象来操作了。而不是用当前线程来操作，
+因为当前线程可能会等待多个线程的锁，如果通过线程来操作，就非常复杂了。
+　　1）wait()、notify()和notifyAll()方法是本地方法，并且为final方法，无法被重写。
+
+　　2）调用某个对象的wait()方法能让当前线程阻塞，并且当前线程必须拥有此对象的monitor（即锁）
+
+　　3）调用某个对象的notify()方法能够唤醒一个正在等待这个对象的monitor的线程，如果有多个线程都在等待这个对象的monitor，则只能唤醒其中一个线程；
+
+　　4）调用notifyAll()方法能够唤醒所有正在等待这个对象的monitor的线程；
+  
+2.Condition是在java 1.5中才出现的，它用来替代传统的Object的wait()、notify()实现线程间的协作，
+相比使用Object的wait()、notify()，使用Condition1的await()、signal()这种方式实现线程间协作更加安全和高效。
+因此通常来说比较推荐使用Condition，阻塞队列实际上是使用了Condition来模拟线程间协作。
+Condition是个接口，基本的方法就是await()和signal()方法；
+Condition依赖于Lock接口，生成一个Condition的基本代码是lock.newCondition() 
+调用Condition的await()和signal()方法，都必须在lock保护之内，就是说必须在lock.lock()和lock.unlock之间才可以使用
+Conditon中的await()对应Object的wait()；
+Condition中的signal()对应Object的notify()；
+Condition中的signalAll()对应Object的notifyAll()。
+
