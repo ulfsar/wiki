@@ -1,0 +1,42 @@
+package com.zhisland.yueju.service.concurrenttest;
+
+import java.util.concurrent.BrokenBarrierException;
+import java.util.concurrent.CyclicBarrier;
+
+/**
+ * 回环栅栏使一组线程等待某一状态后再一起执行
+ * Created by mma on 16/10/11.
+ */
+public class CyclicBarrierTest {
+
+    final static CyclicBarrier barrier = new CyclicBarrier(2);
+
+    static class CountDownLatchTestThread1 implements Runnable{
+        @Override
+        public void run() {
+            System.out.println(Thread.currentThread().getId()+" run111 begin");
+            try {
+                Thread.sleep(5000);
+                System.out.println(Thread.currentThread().getId()+" run111 end");
+                barrier.await();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } catch (BrokenBarrierException e1){
+                e1.printStackTrace();
+            } finally {
+
+            }
+            System.out.println(Thread.currentThread().getId()+" run111 all over");
+        }
+    }
+
+    public static void main(String[] args) {
+//        CountDownLatchTest.CountDownLatchTestThread2 countDownLatchTest2 = countDownLatchTest.new CountDownLatchTestThread2();
+        Thread t1 = new Thread(new CountDownLatchTestThread1());
+        Thread t2 = new Thread(new CountDownLatchTestThread1());
+        //Thread t3 = new Thread(new CountDownLatchTestThread1());
+        t1.start();
+        t2.start();
+        //t3.start();
+    }
+}
