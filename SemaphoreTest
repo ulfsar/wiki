@@ -1,0 +1,42 @@
+package com.zhisland.yueju.service.concurrenttest;
+
+import java.util.concurrent.BrokenBarrierException;
+import java.util.concurrent.Semaphore;
+
+/**
+ * 信号量表示多线程对资源的控制数
+ * Created by mma on 16/10/11.
+ */
+public class SemaphoreTest {
+
+    final static Semaphore semaphore = new Semaphore(5);
+
+    static class SemaphoreTestThread1 implements Runnable{
+
+        private int index;
+
+        public SemaphoreTestThread1(int index) {
+            this.index = index;
+        }
+
+        @Override
+        public void run() {
+            try {
+                semaphore.acquire();
+                System.out.println(Thread.currentThread().getId()+"--> run "+index+ " begin");
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } finally {
+                System.out.println(Thread.currentThread().getId()+"--> release"+index+" end");
+                semaphore.release();
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        for(int i = 0; i< 10; i++){
+            new Thread(new SemaphoreTestThread1(i)).start();
+        }
+    }
+}
