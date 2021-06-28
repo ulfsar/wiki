@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-06-28T12:41:30.884Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="f0TzjGVdkrippoPsGqa4" version="14.8.2" type="github">
+<mxfile host="app.diagrams.net" modified="2021-06-28T12:50:06.348Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="NbwrsLJQCgBSSs44USld" version="14.8.2" type="github">
   <diagram id="5qUsNoTYx4360dhOBtTz" name="第 1 页">
     <mxGraphModel dx="3026" dy="826" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
       <root>
@@ -146,7 +146,7 @@
         <mxCell id="9D2oN5hNdUksZDmOTmMl-75" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#6C8EBF;" edge="1" parent="1" source="9D2oN5hNdUksZDmOTmMl-66" target="9D2oN5hNdUksZDmOTmMl-74">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="9D2oN5hNdUksZDmOTmMl-76" value="跟进" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="9D2oN5hNdUksZDmOTmMl-75">
+        <mxCell id="9D2oN5hNdUksZDmOTmMl-76" value="数据上报" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="9D2oN5hNdUksZDmOTmMl-75">
           <mxGeometry x="-0.125" relative="1" as="geometry">
             <mxPoint y="-12" as="offset" />
           </mxGeometry>
@@ -157,7 +157,7 @@
         <mxCell id="9D2oN5hNdUksZDmOTmMl-95" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#6C8EBF;" edge="1" parent="1" source="9D2oN5hNdUksZDmOTmMl-69" target="9D2oN5hNdUksZDmOTmMl-66">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="9D2oN5hNdUksZDmOTmMl-69" value="&lt;font size=&quot;1&quot;&gt;&lt;b style=&quot;font-size: 12px&quot;&gt;D3&lt;/b&gt;&lt;/font&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;客户生成" style="html=1;dashed=0;whitespace=wrap;shape=mxgraph.dfd.dataStoreID;align=left;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];strokeWidth=2;fontFamily=Verdana;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="9D2oN5hNdUksZDmOTmMl-69" value="&lt;font size=&quot;1&quot;&gt;&lt;b style=&quot;font-size: 12px&quot;&gt;D5&lt;/b&gt;&lt;/font&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;客户生成" style="html=1;dashed=0;whitespace=wrap;shape=mxgraph.dfd.dataStoreID;align=left;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];strokeWidth=2;fontFamily=Verdana;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="423" y="478" width="100" height="30" as="geometry" />
         </mxCell>
         <mxCell id="9D2oN5hNdUksZDmOTmMl-71" value="" style="edgeStyle=segmentEdgeStyle;endArrow=classic;html=1;strokeColor=#6C8EBF;" edge="1" parent="1">
@@ -175,7 +175,7 @@
             <mxPoint x="28" y="3" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="9D2oN5hNdUksZDmOTmMl-74" value="成交/战败" style="html=1;outlineConnect=0;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;shape=mxgraph.archimate3.application;appType=func;archiType=rounded;strokeWidth=2;" vertex="1" parent="1">
+        <mxCell id="9D2oN5hNdUksZDmOTmMl-74" value="统计" style="html=1;outlineConnect=0;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;shape=mxgraph.archimate3.application;appType=func;archiType=rounded;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="603" y="415" width="100" height="30" as="geometry" />
         </mxCell>
         <mxCell id="9D2oN5hNdUksZDmOTmMl-77" value="" style="edgeStyle=segmentEdgeStyle;endArrow=classic;html=1;strokeColor=#6C8EBF;" edge="1" parent="1">
@@ -188,12 +188,12 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="9D2oN5hNdUksZDmOTmMl-79" value="客户信息" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="9D2oN5hNdUksZDmOTmMl-77">
+        <mxCell id="9D2oN5hNdUksZDmOTmMl-79" value="客户" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="9D2oN5hNdUksZDmOTmMl-77">
           <mxGeometry x="-0.3556" y="1" relative="1" as="geometry">
             <mxPoint y="-13" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="9D2oN5hNdUksZDmOTmMl-80" value="&lt;font size=&quot;1&quot;&gt;&lt;b style=&quot;font-size: 12px&quot;&gt;D4&lt;/b&gt;&lt;/font&gt;&amp;nbsp; &amp;nbsp;数据存储" style="html=1;dashed=0;whitespace=wrap;shape=mxgraph.dfd.dataStoreID;align=left;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];strokeWidth=2;fontFamily=Verdana;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="9D2oN5hNdUksZDmOTmMl-80" value="&lt;font size=&quot;1&quot;&gt;&lt;b style=&quot;font-size: 12px&quot;&gt;D6&lt;/b&gt;&lt;/font&gt;&amp;nbsp; &amp;nbsp;数据埋点" style="html=1;dashed=0;whitespace=wrap;shape=mxgraph.dfd.dataStoreID;align=left;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];strokeWidth=2;fontFamily=Verdana;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="683" y="478" width="100" height="30" as="geometry" />
         </mxCell>
         <mxCell id="9D2oN5hNdUksZDmOTmMl-83" value="" style="edgeStyle=segmentEdgeStyle;endArrow=classic;html=1;strokeColor=#6C8EBF;" edge="1" parent="1">
@@ -218,6 +218,16 @@
             <mxPoint x="421" y="429.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="9D2oN5hNdUksZDmOTmMl-118" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#6C8EBF;" edge="1" parent="1" source="9D2oN5hNdUksZDmOTmMl-90">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="540" y="533" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9D2oN5hNdUksZDmOTmMl-119" value="调用" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="9D2oN5hNdUksZDmOTmMl-118">
+          <mxGeometry x="-0.026" y="-1" relative="1" as="geometry">
+            <mxPoint y="14" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="9D2oN5hNdUksZDmOTmMl-90" value="通用工具箱" style="html=1;outlineConnect=0;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;shape=mxgraph.archimate3.application;appType=func;archiType=rounded;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="286" y="518" width="100" height="30" as="geometry" />
         </mxCell>
@@ -230,7 +240,7 @@
         <mxCell id="9D2oN5hNdUksZDmOTmMl-93" value="名片" style="html=1;outlineConnect=0;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;shape=mxgraph.archimate3.application;appType=func;archiType=rounded;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="286" y="343" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="9D2oN5hNdUksZDmOTmMl-94" value="&lt;font size=&quot;1&quot;&gt;&lt;b style=&quot;font-size: 12px&quot;&gt;D4&lt;/b&gt;&lt;/font&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;助销素材" style="html=1;dashed=0;whitespace=wrap;shape=mxgraph.dfd.dataStoreID;align=left;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];strokeWidth=2;fontFamily=Verdana;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="9D2oN5hNdUksZDmOTmMl-94" value="&lt;font size=&quot;1&quot;&gt;&lt;b style=&quot;font-size: 12px&quot;&gt;D3&lt;/b&gt;&lt;/font&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;助销素材" style="html=1;dashed=0;whitespace=wrap;shape=mxgraph.dfd.dataStoreID;align=left;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];strokeWidth=2;fontFamily=Verdana;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="286" y="588" width="100" height="30" as="geometry" />
         </mxCell>
         <mxCell id="9D2oN5hNdUksZDmOTmMl-96" value="" style="edgeStyle=segmentEdgeStyle;endArrow=classic;html=1;strokeColor=#6C8EBF;" edge="1" parent="1">
@@ -252,7 +262,7 @@
             <mxPoint x="350.5" y="445" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="9D2oN5hNdUksZDmOTmMl-101" value="&lt;font size=&quot;1&quot;&gt;&lt;b style=&quot;font-size: 12px&quot;&gt;D5&lt;/b&gt;&lt;/font&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;名片数据" style="html=1;dashed=0;whitespace=wrap;shape=mxgraph.dfd.dataStoreID;align=left;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];strokeWidth=2;fontFamily=Verdana;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="9D2oN5hNdUksZDmOTmMl-101" value="&lt;font size=&quot;1&quot;&gt;&lt;b style=&quot;font-size: 12px&quot;&gt;D4&lt;/b&gt;&lt;/font&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;名片数据" style="html=1;dashed=0;whitespace=wrap;shape=mxgraph.dfd.dataStoreID;align=left;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];strokeWidth=2;fontFamily=Verdana;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="286" y="280" width="100" height="30" as="geometry" />
         </mxCell>
         <mxCell id="9D2oN5hNdUksZDmOTmMl-103" value="" style="edgeStyle=segmentEdgeStyle;endArrow=classic;html=1;strokeColor=#6C8EBF;" edge="1" parent="1">
@@ -293,6 +303,9 @@
             <mxPoint x="251" y="495" as="sourcePoint" />
             <mxPoint x="310" y="445" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="9D2oN5hNdUksZDmOTmMl-117" value="企业微信" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Verdana;align=center;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="543" y="518" width="60" height="32" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
